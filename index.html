@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Faisal | Portfolio</title>
+    <style>
+        :root {
+            --primary-green: #1b392b;
+            --accent-yellow: #ffb400;
+            --light-bg: #f4f7f5;
+            --white: #ffffff;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: bold; font-size: 24px; color: var(--primary-green); }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text-dark); font-weight: 500; }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+            background: var(--white);
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text { flex: 1; min-width: 300px; }
+        .hero-text h4 { color: var(--accent-yellow); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero-text h1 { font-size: 3rem; margin-top: 0; line-height: 1.2; }
+        .hero-text span { color: var(--primary-green); }
+        .hero-text p { font-size: 1.1rem; color: #666; margin-bottom: 30px; }
+
+        /* Image Styling */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%; /* Gol picture ke liye */
+            object-fit: cover;
+            border: 10px solid var(--light-bg);
+            background-color: var(--accent-yellow); /* Agar photo na ho to yellow background dikhega */
+            box-shadow: 20px 20px 0px var(--primary-green);
+        }
+
+        .btn {
+            background: var(--primary-green);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover { background: var(--accent-yellow); color: var(--primary-green); }
+
+        /* Services Section */
+        .services { padding: 80px 10%; text-align: center; }
+        .section-title { font-size: 2.2rem; margin-bottom: 50px; color: var(--primary-green); }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s;
+        }
+
+        .service-card:hover { transform: translateY(-10px); border-bottom: 5px solid var(--accent-yellow); }
+        .service-card h3 { color: var(--primary-green); margin-bottom: 15px; }
+
+        /* Experience Section */
+        .experience-bg { background-color: var(--primary-green); color: white; padding: 80px 10%; }
+        .exp-container { display: flex; gap: 40px; flex-wrap: wrap; }
+        .exp-box { flex: 1; background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .exp-item { margin-bottom: 30px; border-left: 3px solid var(--accent-yellow); padding-left: 20px; }
+        .exp-item h4 { margin: 0; color: var(--accent-yellow); font-size: 1.2rem; }
+        .exp-item p { margin-top: 5px; opacity: 0.9; }
+
+        /* Footer */
+        footer { text-align: center; padding: 60px 10%; background: var(--white); border-top: 1px solid #eee; }
+        .contact-details { margin: 20px 0; font-size: 1.1rem; }
+        .contact-details strong { color: var(--primary-green); }
+
+        @media (max-width: 768px) {
+            .hero { text-align: center; flex-direction: column-reverse; }
+            .hero-text h1 { font-size: 2.2rem; }
+            .hero-image img { width: 250px; height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MUHAMMAD FAISAL</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Journey</a>
+            <a href="mailto:muhammad.62383@hotmail.com" class="btn" style="padding: 8px 20px;">Hire Me</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h4>Welcome to my Portfolio</h4>
+            <h1>I'm <span>Muhammad Faisal</span>,<br>Expert Academic Writer.</h1>
+            <p>Ambitious CA student with practical experience in freelance accounting and finance projects. I specialize in financial reporting and translating complex data into professional documentation.</p>
+            <a href="https://wa.me/923010258276" class="btn">Message on WhatsApp</a>
+        </div>
+        <div class="hero-image">
+            <img src="faisal.jpg" alt="Muhammad Faisal">
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Professional Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Accounting & Finance</h3>
+                <p>Research and writing focused on financial and management accounting with accuracy.</p>
+            </div>
+            <div class="service-card">
+                <h3>Auditing Insights</h3>
+                <p>Specialized documentation and analysis based on auditing principles and standards.</p>
+            </div>
+            <div class="service-card">
+                <h3>Academic English</h3>
+                <p>Structuring complex concepts into high-quality, professional English reports.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience-bg" id="experience">
+        <h2 style="color:white; text-align: center; margin-bottom: 50px;">Education & Experience</h2>
+        <div class="exp-container">
+            <div class="exp-box">
+                <h3 style="border-bottom: 2px solid var(--accent-yellow); display: inline-block; margin-bottom: 25px;">Education</h3>
+                <div class="exp-item">
+                    <h4>2026 - Present</h4>
+                    <p><strong>CA Student</strong><br>Institute of Chartered Accountants of Pakistan (ICAP)</p>
+                </div>
+                <div class="exp-item">
+                    <h4>2024</h4>
+                    <p><strong>Associate Degree in Arts (ADA)</strong><br>Allama Iqbal Open University</p>
+                </div>
+            </div>
+            <div class="exp-box">
+                <h3 style="border-bottom: 2px solid var(--accent-yellow); display: inline-block; margin-bottom: 25px;">Work History</h3>
+                <div class="exp-item">
+                    <h4>2024 - 2026</h4>
+                    <p><strong>Freelance Academic Writer</strong><br>Worked on complex accounting research, report writing, and meeting tight deadlines for global clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Let's Connect</h2>
+        <div class="contact-details">
+            <p><strong>Email:</strong> muhammad.62383@hotmail.com</p>
+            <p><strong>WhatsApp:</strong> +92 301 0258276</p>
+            <p><strong>Phone:</strong> +92 314 3133593</p>
+        </div>
+        <p style="margin-top: 40px; font-size: 13px; color: #888;">© 2026 Muhammad Faisal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
